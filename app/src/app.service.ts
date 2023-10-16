@@ -126,6 +126,18 @@ export class AppService {
         outbound: "name[0].family",
       },
       {
+        inbound: "--http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0",
+        outbound: "extension[0].url",
+      },
+      {
+        inbound: "--http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais",
+        outbound: "extension[0].valueCodeableConcept.coding[0].system",
+      },
+      {
+        inbound: "PAIS",
+        outbound: "extension[0].valueCodeableConcept.coding[0].code",
+      },
+      {
         inbound: "--official",
         outbound: "identifier.use",
       },
@@ -152,11 +164,7 @@ export class AppService {
       {
         inbound: "TELEFONE",
         outbound: "telecom[0].value"
-      },
-      {
-        inbound: "PAIS",
-        outbound: "patient-birth-country"
-      },
+      }
     ]
   }
 
