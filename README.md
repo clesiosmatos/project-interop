@@ -10,5 +10,7 @@ HAPI FHIR é uma biblioteca Java de código aberto que facilita a implementaçã
 ## Algoritmo de interoperabilidade
 Foi realizado a implementação de algoritmo que é capaz de transformar qualquer payload em json para outro formato usando um mapeamento. Com isso fui caapaz de extrair os dados do arquivo csv e tranformar no formato fhir para depois enviar para o servidor hapi fhir, segregado por recurso, sendo Patient e Observation.
 
+Para isso, utilizei o framework Nestjs que utiliza Nodejs + Typescript. O projeto encontra-se dentro da pasta /app
+
 ## Bônus
 Fui capaz de subir as definitions FHIR originais usando hapi-fhir-cli, porém não consegui subir ainda o structure definition do resource Patient da RNDS. Com mais tempo, seria possível.
